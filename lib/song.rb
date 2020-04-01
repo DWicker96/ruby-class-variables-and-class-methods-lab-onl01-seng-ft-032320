@@ -9,27 +9,39 @@ attr_accessor :count, :artist, :genre
    @artist = artist
    @genre = genre
    @@count += 1
-   @@artist << artist
-   @@genre << genre
+   @@artists << artist
+   @@genres << genre
 end
 
-  def count
-
-
-
+  def self.count
+    @@count
   end
 
-  def artist
-
+  def self.artist
+    @@artists.uniq!
   end
 
-  def genre
-
+  def self.genre
+    @@genres.uniq!
   end
 
-  def genre_count
-
+  def self.genre_count
+    genre_count = {}
+  @@gerne.each do |genre|
+    if genre_count[genre]
+      genre_count[genre] +=1
+    else
+      genre_count[genre]= 1
+    end
   end
 
+  def self.artist_count
+    artist_count = {}
+  @@artist.each do |artist|
+    if artist_count[artist]
+      artist_count[genre] +=1
+    else
+      artist_count[genre]= 1
+    end
+  end
 
-end
