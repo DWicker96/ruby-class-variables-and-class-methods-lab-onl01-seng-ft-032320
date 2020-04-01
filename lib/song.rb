@@ -7,7 +7,7 @@ attr_accessor :name, :artist, :genre
 
  def initialize(song_name, artist, genre)
    @name = song_name
-   @artists = artist
+   @artist = artist
    @genres = genre
    @@count += 1
    @@artists << artist
